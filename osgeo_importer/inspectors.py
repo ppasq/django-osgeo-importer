@@ -103,8 +103,8 @@ class GDALInspector(InspectorMixin):
         """
         Adds the <X|Y|GEOM>_POSSIBLE_NAMES opening options.
         """
-        x_possible = getattr(settings, 'IMPORT_CSV_X_FIELDS', ['Lon*', 'x', 'lon*'])
-        y_possible = getattr(settings, 'IMPORT_CSV_Y_FIELDS', ['Lat*', 'y', 'lat*'])
+        x_possible = getattr(settings, 'IMPORT_CSV_X_FIELDS', ['Lon*', 'x', 'lon*', '*Longitude'])
+        y_possible = getattr(settings, 'IMPORT_CSV_Y_FIELDS', ['Lat*', 'y', 'lat*', '*Latitude'])
         geom_possible = getattr(settings, 'IMPORT_CSV_GEOM_FIELDS',
                                 ['geom', 'GEOM', 'WKT', 'the_geom', 'THE_GEOM', 'WKB', 'wkb_geometry'])
 
